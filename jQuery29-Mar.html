@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<style>
+    .img{
+        
+        position: relative;
+    }
+</style>
+<body>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <h1>jQuery</h1>
+
+    <button id="fadeIn">Fade In</button>
+    <button id="FadeOut">Fade Out</button>
+    <button id="FadeToggle">Fade Toggle</button>
+    <button id="FadeTo">Fade To</button>
+    <h2>Fade Events</h2>
+
+    <button class="animation">Animate</button>
+    <button class="stop">Animate Stop</button> <br> <br>
+   
+    <div  class="div">
+        <img class="img" src="https://wallpapers.com/images/featured/9w27dqmc4nrs3xwd.jpg" alt="" width="200px" height="200px">
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+    crossorigin="anonymous"></script>
+
+
+
+    <script>
+        $(document).ready(function(){
+
+            $('#fadeIn').click(function(){
+                $('h2').fadeIn(2000,0,1)
+            })
+
+            $('.animation').click(function(){
+                $('.img').animate({left : '300px',borderRadius : '10%',opacity : '0.6'},2000)
+                $('.img').animate({top : '150px',borderRadius : '30%',opacity : '0.2'},2000)
+                $('.img').animate({left : '0px',borderRadius : '50%',opacity : '0.8'},2000)
+                $('.img').animate({top : '0px',borderRadius : '0%',opacity : '1'},2000)
+            })
+
+            $('.stop').click(function(){
+                $('.img').stop()
+            })
+
+        })
+
+    
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
